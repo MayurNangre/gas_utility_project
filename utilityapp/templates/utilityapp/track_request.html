@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Service Requests</title>
+</head>
+<body>
+    <h1>Track Service Requests</h1>
+    {% if service_requests %}
+        <ul>
+        {% for request in service_requests %}
+            <li>Status: {{ request.status }}, Submission Date: {{ request.submission_date }}, Resolution Date: {{ request.resolution_date }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No service requests found.</p>
+    {% endif %}
+</body>
+</html>
